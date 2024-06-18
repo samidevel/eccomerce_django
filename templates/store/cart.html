@@ -39,7 +39,7 @@
             <figure class="itemside align-items-center">
                 <div class="aside"><img src="{{ cart_item.product.images.url }}" class="img-sm"></div>
                 <figcaption class="info">
-                    <a href="#" class="title text-dark">{{cart_item.product.product_name}}</a>
+                    <a href="{{cart_item.product.get_url}}" class="title text-dark">{{cart_item.product.product_name}}</a>
                     <p class="text-muted small">Matrix: 25 Mpx <br> Marca: Canon</p>
                 </figcaption>
             </figure>
@@ -61,7 +61,7 @@
         <td> 
             <div class="price-wrap"> 
                 <var class="price">{{cart_item.sub_total}}</var> 
-                <small class="text-muted"> ${{cart_item.product.price}} cada uno </small> 
+                <small class="text-muted"> ${{cart_item.product.price}} cada uno </small>
             </div> <!-- price-wrap .// -->
         </td>
         <td class="text-right"> 
@@ -98,7 +98,7 @@
                     <img src="{% static './images/misc/payments.png' %}" height="26">
                 </p>
                 <a href="./place-order.html" class="btn btn-primary btn-block"> Pagar </a>
-                <a href="./store.html" class="btn btn-light btn-block">Continua comprando</a>
+                <a href="{% url 'store' %}" class="btn btn-light btn-block">Continua comprando</a>
             </div> <!-- card-body.// -->
             </div> <!-- card.// -->
     
