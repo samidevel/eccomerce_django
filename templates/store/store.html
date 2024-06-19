@@ -132,6 +132,7 @@
 
     <div class="row">
 
+        {% if products %}
         {% for product in products %}
 
         <div class="col-md-4">
@@ -155,6 +156,11 @@
         </div> <!-- col.// -->
 
         {% endfor %}
+        {% else %}
+            <div>
+                <H2>No se encontraron resultados</H2>
+            </div>
+        {% endif %}
     
 
     </div> <!-- row end.// -->
